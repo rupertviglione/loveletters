@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="light" data-lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Loja — Love Letters</title>
+  <meta name="description" content="Cartas de amor para vestir, tocar e guardar. Love Letters." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Loja — Love Letters" />
+  <meta property="og:description" content="Cartas de amor para vestir, tocar e guardar." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/app.js"></script>
+</head>
+
+<body class="shop-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Love Letters</a>
+
+    <nav class="main-nav">
+      <a href="/">Início</a>
+      <a href="/loja/" class="active">Loja</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="toggle-theme" aria-label="Modo escuro">◐</button>
+      <button id="toggle-lang" aria-label="Idioma">PT</button>
+      <a href="/cart/" class="cart-icon" aria-label="Carrinho">
+        🛒 <span data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="shop">
+
+    <!-- INTRO -->
+    <section class="shop-intro">
+
+      <!-- PT -->
+      <div data-lang="pt">
+        <h1>Love Letters</h1>
+        <p>
+          Cartas de amor para usar junto ao peito, coladas à pele,
+          para beijar o ombro, para vestir paredes.
+        </p>
+      </div>
+
+      <!-- EN -->
+      <div data-lang="en" hidden>
+        <h1>Love Letters</h1>
+        <p>
+          Love letters to be worn close to the heart, against the skin,
+          to kiss the shoulder, to dress walls.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- FILTERS -->
+    <aside class="shop-filters">
+
+      <!-- PT -->
+      <div data-lang="pt">
+        <button data-filter="all" class="active">Tudo</button>
+        <button data-filter="tshirt">T-shirts</button>
+        <button data-filter="poster">Posters</button>
+        <button data-filter="tote">Tote bags</button>
+        <button data-filter="caderno">Cadernos</button>
+      </div>
+
+      <!-- EN -->
+      <div data-lang="en" hidden>
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="tshirt">T-shirts</button>
+        <button data-filter="poster">Posters</button>
+        <button data-filter="tote">Tote bags</button>
+        <button data-filter="caderno">Notebooks</button>
+      </div>
+
+    </aside>
+
+    <!-- GRID -->
+    <section class="shop-grid" data-products>
+
+      <!-- PRODUCT CARD -->
+      <article class="product-card" data-category="tshirt">
+        <a href="#" class="product-link" data-product-id="era-uma-vez">
+
+          <img
+            src="/assets/images/produtos/era-uma-vez.jpg"
+            alt="Era uma vez"
+            loading="lazy"
+          />
+
+          <div class="product-info">
+            <h2>Era uma vez</h2>
+
+            <!-- PT -->
+            <p data-lang="pt">T-shirt poema</p>
+
+            <!-- EN -->
+            <p data-lang="en" hidden>Poem T-shirt</p>
+
+            <span class="price">28 €</span>
+          </div>
+        </a>
+
+        <!-- PT -->
+        <button class="btn add-to-cart" data-add-to-cart data-lang="pt">
+          Adicionar
+        </button>
+
+        <!-- EN -->
+        <button class="btn add-to-cart" data-add-to-cart data-lang="en" hidden>
+          Add to cart
+        </button>
+      </article>
+
+      <!-- Repete cards via HTML ou JS -->
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+    <p>
+     Design do site por
+<a href="https://clarastudio.pt" target="_blank" rel="noopener"> - clara.</a>
+    </p>
+  </footer>
+
+</body>
+</html>

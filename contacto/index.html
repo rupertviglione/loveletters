@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="light" data-lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Contacto — Love Letters</title>
+  <meta name="description" content="Envia-nos uma carta. Encomendas, perguntas ou propostas — respondemos por email." />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/app.js"></script>
+</head>
+
+<body class="contact-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Love Letters</a>
+
+    <nav class="main-nav">
+      <a href="/">Início</a>
+      <a href="/loja/">Loja</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="toggle-theme" aria-label="Modo escuro">◐</button>
+      <button id="toggle-lang" aria-label="Idioma">PT</button>
+      <a href="/cart/" class="cart-icon" aria-label="Carrinho">
+        🛒 <span data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="contact">
+
+    <!-- ENVELOPE / LETTER -->
+    <section class="contact-hero">
+
+      <!-- envelope como fundo -->
+      <div
+        class="contact-envelope"
+        role="img"
+        aria-label="Envelope com carta"
+        style="background-image: url('/assets/img/contacto-lg.jpg');"
+      >
+
+        <!-- carta -->
+        <div class="contact-letter">
+
+          <!-- PT -->
+          <div data-lang="pt">
+            <h1>Escreve-nos uma carta</h1>
+
+            <p class="contact-intro">
+              Envia as tuas Love Letters.  
+              Encomendas, perguntas ou propostas — respondemos por email.
+            </p>
+          </div>
+
+          <!-- EN -->
+          <div data-lang="en" hidden>
+            <h1>Write us a letter</h1>
+
+            <p class="contact-intro">
+              Send your Love Letters.  
+              Orders, questions or collaborations — we’ll reply by email.
+            </p>
+          </div>
+
+          <!-- FORM -->
+          <form
+            class="contact-form"
+            id="contact-form"
+            novalidate
+            data-form="contact"
+          >
+
+            <div class="form-row">
+              <div class="form-field half">
+                <label for="name" class="sr-only">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nome"
+                  required
+                />
+              </div>
+
+              <div class="form-field half">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="subject" class="sr-only">Assunto</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Assunto (ex.: encomenda, parceria)"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="message" class="sr-only">Mensagem</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Escreve aqui a tua carta…"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-consent">
+              <label>
+                <input type="checkbox" name="consent" required />
+                <span data-lang="pt">
+                  Concordo que a Love Letters use estes dados para responder.
+                </span>
+                <span data-lang="en" hidden>
+                  I consent to Love Letters using this data to reply.
+                </span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn ghost">
+                <span data-lang="pt">Limpar</span>
+                <span data-lang="en" hidden>Clear</span>
+              </button>
+
+              <button type="submit" class="btn primary">
+                <span data-lang="pt">Enviar carta</span>
+                <span data-lang="en" hidden>Send letter</span>
+              </button>
+            </div>
+
+            <!-- mensagens de estado (JS depois) -->
+            <div class="form-status" aria-live="polite"></div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+    <p>
+     Design do site por
+<a href="https://clarastudio.pt" target="_blank" rel="noopener"> - clara.</a>
+    </p>
+  </footer>
+
+</body>
+</html>
