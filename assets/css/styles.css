@@ -332,8 +332,26 @@ a:hover::after {
   gap: 2rem;
   padding: 3rem 1.25rem 4rem;
 }
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
 @media (min-width: 768px) {
+      .home-hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
   .cart-content {
     grid-template-columns: 2fr 1fr;
   }
