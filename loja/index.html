@@ -41,88 +41,81 @@
   <!-- MAIN -->
   <main class="shop">
 
-    <!-- INTRO -->
-    <section class="shop-intro">
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-up">
 
-      <!-- PT -->
-      <div data-lang="pt">
-        <h1>Love Letters</h1>
-        <p>
-          Cartas de amor para usar junto ao peito, coladas à pele,
-          para beijar o ombro, para vestir paredes.
-        </p>
-      </div>
+    <!-- PT -->
+    <div data-lang="pt">
+      <h1 class="hero-title">Loja</h1>
 
-      <!-- EN -->
-      <div data-lang="en" hidden>
-        <h1>Love Letters</h1>
-        <p>
-          Love letters to be worn close to the heart, against the skin,
-          to kiss the shoulder, to dress walls.
-        </p>
-      </div>
+      <p class="hero-lead">
+        Cartas de amor para vestir, tocar e guardar.
+      </p>
+    </div>
 
-    </section>
+    <!-- EN -->
+    <div data-lang="en" hidden>
+      <h1 class="hero-title">Shop</h1>
 
-    <!-- FILTERS -->
-    <aside class="shop-filters">
+      <p class="hero-lead">
+        Love letters to wear, touch and keep.
+      </p>
+    </div>
 
-      <!-- PT -->
-      <div data-lang="pt">
-        <button data-filter="all" class="active">Tudo</button>
-        <button data-filter="tshirt">T-shirts</button>
-        <button data-filter="poster">Posters</button>
-        <button data-filter="tote">Tote bags</button>
-        <button data-filter="caderno">Cadernos</button>
-      </div>
+  </section>
 
-      <!-- EN -->
-      <div data-lang="en" hidden>
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="tshirt">T-shirts</button>
-        <button data-filter="poster">Posters</button>
-        <button data-filter="tote">Tote bags</button>
-        <button data-filter="caderno">Notebooks</button>
-      </div>
+  <!-- FILTERS -->
+  <section class="shop-filters fade-up delay-1">
 
-    </aside>
+    <!-- PT -->
+    <div data-lang="pt">
+      <button data-filter="all" class="active">Tudo</button>
+      <button data-filter="tshirt">T-shirts</button>
+      <button data-filter="poster">Posters</button>
+      <button data-filter="tote">Tote bags</button>
+      <button data-filter="caderno">Cadernos</button>
+    </div>
 
-    <!-- GRID -->
-    <section class="shop-grid" data-products>
+    <!-- EN -->
+    <div data-lang="en" hidden>
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="tshirt">T-shirts</button>
+      <button data-filter="poster">Posters</button>
+      <button data-filter="tote">Tote bags</button>
+      <button data-filter="caderno">Notebooks</button>
+    </div>
 
-      <!-- PRODUCT CARD -->
-      <article class="product-card" data-category="tshirt">
-        <a href="#" class="product-link" data-product-id="era-uma-vez">
+  </section>
 
-          <img
-            src="../assets/images/produtos/era-uma-vez.jpg"
-            alt="Era uma vez"
-            loading="lazy"
-          />
+  <!-- GRID -->
+  <section class="shop-grid fade-up delay-2" data-products>
 
-          <div class="product-info">
-            <h2>Era uma vez</h2>
+    <!-- PRODUCT CARD -->
+    <article class="product-card" data-category="tshirt">
 
-            <!-- PT -->
-            <p data-lang="pt">T-shirt poema</p>
+      <a href="#" class="product-link" data-product-id="era-uma-vez">
+        <img
+          src="../assets/img/era-uma-vez-1.jpg"
+          alt="Era uma vez"
+          loading="lazy"
+        />
 
-            <!-- EN -->
-            <p data-lang="en" hidden>Poem T-shirt</p>
+        <div class="product-info">
+          <h2>Era uma vez</h2>
 
-            <span class="price">28 €</span>
-          </div>
-        </a>
+          <p data-lang="pt">T-shirt poema</p>
+          <p data-lang="en" hidden>Poem T-shirt</p>
 
-        <!-- PT -->
-        <button class="btn add-to-cart" data-add-to-cart data-lang="pt">
-          Adicionar
-        </button>
+          <span class="price">28 €</span>
+        </div>
+      </a>
 
-        <!-- EN -->
-        <button class="btn add-to-cart" data-add-to-cart data-lang="en" hidden>
-          Add to cart
-        </button>
-      </article>
+      <button class="add-to-cart" data-add-to-cart>
+        <span data-lang="pt">Adicionar</span>
+        <span data-lang="en" hidden>Add</span>
+      </button>
+
+    </article>
 
       <!-- Repete cards via HTML ou JS -->
 

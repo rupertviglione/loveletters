@@ -40,121 +40,125 @@
   </header>
 
   <!-- MAIN -->
-  <main class="cart">
+ <main class="cart">
 
-    <header class="cart-header">
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-up">
+
+    <!-- PT -->
+    <div data-lang="pt">
+      <h1 class="hero-title">Carrinho</h1>
+
+      <p class="hero-lead">
+        As tuas Love Letters, quase prontas a seguir viagem.
+      </p>
+    </div>
+
+    <!-- EN -->
+    <div data-lang="en" hidden>
+      <h1 class="hero-title">Cart</h1>
+
+      <p class="hero-lead">
+        Your Love Letters, almost ready to travel.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CART CONTENT -->
+  <section class="cart-content fade-up delay-1">
+
+    <!-- EMPTY STATE -->
+    <div class="cart-empty" hidden>
 
       <!-- PT -->
       <div data-lang="pt">
-        <h1>Carrinho</h1>
-        <p class="cart-subtitle">
-          Estás quase a escrever esta carta.
+        <p>O carrinho está vazio.</p>
+        <a href="../loja/" class="btn primary">
+          Voltar à loja
+        </a>
+      </div>
+
+      <!-- EN -->
+      <div data-lang="en" hidden>
+        <p>Your cart is empty.</p>
+        <a href="../loja/" class="btn primary">
+          Back to shop
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ITEMS -->
+    <ul class="cart-items" data-cart-items>
+      <!-- JS injects items here -->
+    </ul>
+
+    <!-- SUMMARY -->
+    <aside class="cart-summary" data-cart-summary>
+
+      <!-- PT -->
+      <div data-lang="pt">
+        <h2>Resumo</h2>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span data-cart-subtotal>0 €</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Envio</span>
+          <span>A calcular</span>
+        </div>
+
+        <div class="summary-line total">
+          <span>Total</span>
+          <span data-cart-total>0 €</span>
+        </div>
+
+        <button class="btn primary btn-checkout" disabled>
+          Finalizar compra
+        </button>
+
+        <p class="checkout-note">
+          Pagamento simulado neste protótipo.
         </p>
       </div>
 
       <!-- EN -->
       <div data-lang="en" hidden>
-        <h1>Cart</h1>
-        <p class="cart-subtitle">
-          You’re almost writing this letter.
+        <h2>Summary</h2>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span data-cart-subtotal>0 €</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Shipping</span>
+          <span>To be calculated</span>
+        </div>
+
+        <div class="summary-line total">
+          <span>Total</span>
+          <span data-cart-total>0 €</span>
+        </div>
+
+        <button class="btn primary btn-checkout" disabled>
+          Checkout
+        </button>
+
+        <p class="checkout-note">
+          Payment is simulated in this prototype.
         </p>
       </div>
 
-    </header>
+    </aside>
 
-    <!-- CART CONTENT -->
-    <section class="cart-content">
+  </section>
 
-      <!-- EMPTY STATE -->
-      <div class="cart-empty" hidden>
+</main>
 
-        <!-- PT -->
-        <div data-lang="pt">
-          <p>O carrinho está vazio.</p>
-          <a href="../loja/" class="btn primary">
-            Voltar à Loja
-          </a>
-        </div>
-
-        <!-- EN -->
-        <div data-lang="en" hidden>
-          <p>Your cart is empty.</p>
-          <a href="../loja/" class="btn primary">
-            Back to shop
-          </a>
-        </div>
-
-      </div>
-
-      <!-- ITEMS -->
-      <ul class="cart-items" data-cart-items>
-        <!-- JS injects items here -->
-      </ul>
-
-      <!-- SUMMARY -->
-      <aside class="cart-summary" data-cart-summary>
-
-        <!-- PT -->
-        <div data-lang="pt">
-          <h2>Resumo</h2>
-
-          <div class="summary-line">
-            <span>Subtotal</span>
-            <span data-cart-subtotal>0 €</span>
-          </div>
-
-          <div class="summary-line">
-            <span>Envio</span>
-            <span>A calcular</span>
-          </div>
-
-          <div class="summary-line total">
-            <span>Total</span>
-            <span data-cart-total>0 €</span>
-          </div>
-
-          <button class="btn primary btn-checkout" disabled>
-            Finalizar compra
-          </button>
-
-          <p class="checkout-note">
-            Pagamento simulado neste protótipo.
-          </p>
-        </div>
-
-        <!-- EN -->
-        <div data-lang="en" hidden>
-          <h2>Summary</h2>
-
-          <div class="summary-line">
-            <span>Subtotal</span>
-            <span data-cart-subtotal>0 €</span>
-          </div>
-
-          <div class="summary-line">
-            <span>Shipping</span>
-            <span>To be calculated</span>
-          </div>
-
-          <div class="summary-line total">
-            <span>Total</span>
-            <span data-cart-total>0 €</span>
-          </div>
-
-          <button class="btn primary btn-checkout" disabled>
-            Checkout
-          </button>
-
-          <p class="checkout-note">
-            Payment is simulated in this prototype.
-          </p>
-        </div>
-
-      </aside>
-
-    </section>
-
-  </main>
 
   <!-- FOOTER -->
 <footer class="site-footer">

@@ -34,128 +34,136 @@
   </header>
 
   <!-- MAIN -->
-  <main class="contact">
+<main class="contact">
 
-    <!-- ENVELOPE / LETTER -->
-    <section class="contact-hero">
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-up">
 
-      <!-- envelope como fundo -->
-      <div
-        class="contact-envelope"
-        role="img"
-        aria-label="Envelope com carta"
-        style="background-image: url('../assets/img/contacto-lg.jpg');"
+    <!-- PT -->
+    <div data-lang="pt">
+      <h1 class="hero-title">Contacto</h1>
+
+      <p class="hero-lead">
+        Escreve-nos uma carta. Encomendas, perguntas ou propostas.
+      </p>
+    </div>
+
+    <!-- EN -->
+    <div data-lang="en" hidden>
+      <h1 class="hero-title">Contact</h1>
+
+      <p class="hero-lead">
+        Write us a letter. Orders, questions or collaborations.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- LETTER / FORM -->
+  <section class="contact-content fade-up delay-1">
+
+    <div class="letter">
+
+      <!-- PT -->
+      <div data-lang="pt">
+
+        <p>
+          Preferimos cartas a formulários.
+          Mas prometemos responder.
+        </p>
+
+      </div>
+
+      <!-- EN -->
+      <div data-lang="en" hidden>
+
+        <p>
+          We prefer letters over forms.
+          But we promise to reply.
+        </p>
+
+      </div>
+
+      <form
+        class="contact-form"
+        data-form="contact"
+        novalidate
       >
 
-        <!-- carta -->
-        <div class="contact-letter">
-
-          <!-- PT -->
-          <div data-lang="pt">
-            <h1>Escreve-nos uma carta</h1>
-
-            <p class="contact-intro">
-              Envia as tuas Love Letters.  
-              Encomendas, perguntas ou propostas — respondemos por email.
-            </p>
-          </div>
-
-          <!-- EN -->
-          <div data-lang="en" hidden>
-            <h1>Write us a letter</h1>
-
-            <p class="contact-intro">
-              Send your Love Letters.  
-              Orders, questions or collaborations — we’ll reply by email.
-            </p>
-          </div>
-
-          <!-- FORM -->
-          <form
-            class="contact-form"
-            id="contact-form"
-            novalidate
-            data-form="contact"
-          >
-
-            <div class="form-row">
-              <div class="form-field half">
-                <label for="name" class="sr-only">Nome</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Nome"
-                  required
-                />
-              </div>
-
-              <div class="form-field half">
-                <label for="email" class="sr-only">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="subject" class="sr-only">Assunto</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Assunto (ex.: encomenda, parceria)"
-              />
-            </div>
-
-            <div class="form-field">
-              <label for="message" class="sr-only">Mensagem</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Escreve aqui a tua carta…"
-                required
-              ></textarea>
-            </div>
-
-            <div class="form-consent">
-              <label>
-                <input type="checkbox" name="consent" required />
-                <span data-lang="pt">
-                  Concordo que a Love Letters use estes dados para responder.
-                </span>
-                <span data-lang="en" hidden>
-                  I consent to Love Letters using this data to reply.
-                </span>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button type="reset" class="btn ghost">
-                <span data-lang="pt">Limpar</span>
-                <span data-lang="en" hidden>Clear</span>
-              </button>
-
-              <button type="submit" class="btn primary">
-                <span data-lang="pt">Enviar carta</span>
-                <span data-lang="en" hidden>Send letter</span>
-              </button>
-            </div>
-
-            <!-- mensagens de estado (JS depois) -->
-            <div class="form-status" aria-live="polite"></div>
-
-          </form>
-
+        <div class="form-field">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
         </div>
-      </div>
-    </section>
 
-  </main>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="subject">
+            <span data-lang="pt">Assunto</span>
+            <span data-lang="en" hidden>Subject</span>
+          </label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="message">
+            <span data-lang="pt">Mensagem</span>
+            <span data-lang="en" hidden>Message</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-field form-consent">
+          <label>
+            <input type="checkbox" required />
+            <span data-lang="pt">
+              Concordo que a Love Letters use estes dados para responder.
+            </span>
+            <span data-lang="en" hidden>
+              I agree that Love Letters may use this data to reply.
+            </span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">
+            <span data-lang="pt">Enviar carta</span>
+            <span data-lang="en" hidden>Send letter</span>
+          </button>
+        </div>
+
+        <div class="form-status" aria-live="polite"></div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
 
   <!-- FOOTER -->
 <footer class="site-footer">
