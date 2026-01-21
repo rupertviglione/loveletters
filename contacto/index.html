@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-PT" data-theme="light" data-lang="pt">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Contacto — Love Letters</title>
-  <meta name="description" content="Envia-nos uma carta. Encomendas, perguntas ou propostas — respondemos por email." />
+  <meta name="description" content="Contacto — escreve-nos uma carta." />
 
-<link rel="stylesheet" href="../assets/css/styles.css">
-<script defer src="../assets/js/app.js"></script>
-
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/app.js"></script>
 </head>
 
 <body class="contact-page">
@@ -22,154 +21,128 @@
       <a href="../">Início</a>
       <a href="../loja/">Loja</a>
       <a href="../sobre/">Sobre</a>
+      <a href="./" class="active">Contacto</a>
     </nav>
 
     <div class="header-actions">
-      <button id="toggle-theme" aria-label="Modo escuro">◐</button>
-      <button id="toggle-lang" aria-label="Idioma">PT</button>
-      <a href="../cart/" class="cart-icon" aria-label="Carrinho">
+      <button id="toggle-theme">◐</button>
+      <button id="toggle-lang">PT</button>
+      <a href="../cart/" class="cart-icon">
         🛒 <span data-cart-count>0</span>
       </a>
     </div>
   </header>
 
   <!-- MAIN -->
-<main class="contact">
+  <main>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero fade-up">
-
-    <!-- PT -->
-    <div data-lang="pt">
-      <h1 class="hero-title">Contacto</h1>
-
-      <p class="hero-lead">
-        Escreve-nos uma carta. Encomendas, perguntas ou propostas.
-      </p>
-    </div>
-
-    <!-- EN -->
-    <div data-lang="en" hidden>
-      <h1 class="hero-title">Contact</h1>
-
-      <p class="hero-lead">
-        Write us a letter. Orders, questions or collaborations.
-      </p>
-    </div>
-
-  </section>
-
-  <!-- LETTER / FORM -->
-  <section class="contact-content fade-up delay-1">
-
-    <div class="letter">
-
-      <!-- PT -->
+    <!-- PAGE HERO -->
+    <section class="page-hero fade-up">
       <div data-lang="pt">
-
-        <p>
-          Preferimos cartas a formulários.
-          Mas prometemos responder.
+        <h1 class="hero-title">Contacto</h1>
+        <p class="hero-lead">
+          Escreve-nos uma carta.
         </p>
-
       </div>
 
-      <!-- EN -->
       <div data-lang="en" hidden>
-
-        <p>
-          We prefer letters over forms.
-          But we promise to reply.
+        <h1 class="hero-title">Contact</h1>
+        <p class="hero-lead">
+          Write us a letter.
         </p>
+      </div>
+    </section>
+
+    <!-- IMAGE + FORM -->
+    <section class="contact-content fade-up delay-1">
+
+      <div class="contact-wrapper">
+
+        <!-- IMAGE -->
+        <div class="contact-image">
+          <img
+            src="../assets/img/contacto.png"
+            alt="Máquina de escrever com folha"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form-wrapper">
+
+          <!-- PT -->
+          <form data-lang="pt" class="contact-form">
+
+            <p class="editorial">
+              Preferimos cartas a formulários.
+              Mas prometemos responder.
+            </p>
+
+            <label>
+              Nome
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Mensagem
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button type="submit" class="btn primary">
+              Enviar carta
+            </button>
+
+          </form>
+
+          <!-- EN -->
+          <form data-lang="en" hidden class="contact-form">
+
+            <p class="editorial">
+              We prefer letters over forms.
+              But we promise to reply.
+            </p>
+
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button type="submit" class="btn primary">
+              Send letter
+            </button>
+
+          </form>
+
+        </div>
 
       </div>
 
-      <form
-        class="contact-form"
-        data-form="contact"
-        novalidate
-      >
+    </section>
 
-        <div class="form-field">
-          <label for="name">Nome</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="subject">
-            <span data-lang="pt">Assunto</span>
-            <span data-lang="en" hidden>Subject</span>
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="message">
-            <span data-lang="pt">Mensagem</span>
-            <span data-lang="en" hidden>Message</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="6"
-            required
-          ></textarea>
-        </div>
-
-        <div class="form-field form-consent">
-          <label>
-            <input type="checkbox" required />
-            <span data-lang="pt">
-              Concordo que a Love Letters use estes dados para responder.
-            </span>
-            <span data-lang="en" hidden>
-              I agree that Love Letters may use this data to reply.
-            </span>
-          </label>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn primary">
-            <span data-lang="pt">Enviar carta</span>
-            <span data-lang="en" hidden>Send letter</span>
-          </button>
-        </div>
-
-        <div class="form-status" aria-live="polite"></div>
-
-      </form>
-
-    </div>
-
-  </section>
-
-</main>
-
+  </main>
 
   <!-- FOOTER -->
-<footer class="site-footer">
+  <footer class="site-footer">
     <p>
-     Design do site por
-<a href="https://clarastudio.pt" target="_blank" rel="noopener"> - clara.</a>
+      Design do site por
+      <a href="https://clarastudio.pt" target="_blank" rel="noopener">
+        clara.
+      </a>
     </p>
   </footer>
 
