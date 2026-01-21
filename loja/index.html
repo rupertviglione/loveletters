@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Loja — Love Letters</title>
-  <meta name="description" content="Cartas de amor para vestir, tocar e guardar. Love Letters." />
+  <meta name="description" content="Cartas de amor para vestir, tocar e guardar." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Loja — Love Letters" />
-  <meta property="og:description" content="Cartas de amor para vestir, tocar e guardar." />
-  <meta property="og:type" content="website" />
-
-  <link rel="stylesheet" href="../assets/css/styles.css">
-<script defer src="../assets/js/app.js"></script>
-
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script defer src="../assets/js/app.js"></script>
 </head>
 
 <body class="shop-page">
@@ -25,109 +19,96 @@
 
     <nav class="main-nav">
       <a href="../">Início</a>
-      <a href="../loja/" class="active">Loja</a>
+      <a href="./" class="active">Loja</a>
       <a href="../sobre/">Sobre</a>
+      <a href="../contacto/">Contacto</a>
     </nav>
 
     <div class="header-actions">
-      <button id="toggle-theme" aria-label="Modo escuro">◐</button>
-      <button id="toggle-lang" aria-label="Idioma">PT</button>
-      <a href="../cart/" class="cart-icon" aria-label="Carrinho">
+      <button id="toggle-theme">◐</button>
+      <button id="toggle-lang">PT</button>
+      <a href="../cart/" class="cart-icon">
         🛒 <span data-cart-count>0</span>
       </a>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="shop">
+  <main>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero fade-up">
+    <!-- PAGE HERO -->
+    <section class="page-hero fade-up">
+      <div data-lang="pt">
+        <h1 class="hero-title">Loja</h1>
+        <p class="hero-lead">
+          Cartas de amor para vestir, tocar e guardar.
+        </p>
+      </div>
 
-    <!-- PT -->
-    <div data-lang="pt">
-      <h1 class="hero-title">Loja</h1>
+      <div data-lang="en" hidden>
+        <h1 class="hero-title">Shop</h1>
+        <p class="hero-lead">
+          Love letters to wear, touch and keep.
+        </p>
+      </div>
+    </section>
 
-      <p class="hero-lead">
-        Cartas de amor para vestir, tocar e guardar.
-      </p>
-    </div>
+    <!-- GRID -->
+    <section class="shop-grid fade-up delay-1">
 
-    <!-- EN -->
-    <div data-lang="en" hidden>
-      <h1 class="hero-title">Shop</h1>
-
-      <p class="hero-lead">
-        Love letters to wear, touch and keep.
-      </p>
-    </div>
-
-  </section>
-
-  <!-- FILTERS -->
-  <section class="shop-filters fade-up delay-1">
-
-    <!-- PT -->
-    <div data-lang="pt">
-      <button data-filter="all" class="active">Tudo</button>
-      <button data-filter="tshirt">T-shirts</button>
-      <button data-filter="poster">Posters</button>
-      <button data-filter="tote">Tote bags</button>
-      <button data-filter="caderno">Cadernos</button>
-    </div>
-
-    <!-- EN -->
-    <div data-lang="en" hidden>
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="tshirt">T-shirts</button>
-      <button data-filter="poster">Posters</button>
-      <button data-filter="tote">Tote bags</button>
-      <button data-filter="caderno">Notebooks</button>
-    </div>
-
-  </section>
-
-  <!-- GRID -->
-  <section class="shop-grid fade-up delay-2" data-products>
-
-    <!-- PRODUCT CARD -->
-    <article class="product-card" data-category="tshirt">
-
-      <a href="#" class="product-link" data-product-id="era-uma-vez">
+      <!-- PRODUCT 1 -->
+      <article class="product-card">
         <img
-          src="../assets/img/era-uma-vez-1.png"
-          alt="Era uma vez"
+          src="../assets/img/tote-o-poema-3.webp"
+          alt="Tote bag com poema"
           loading="lazy"
         />
 
         <div class="product-info">
-          <h2>Era uma vez</h2>
-
-          <p data-lang="pt">T-shirt poema</p>
-          <p data-lang="en" hidden>Poem T-shirt</p>
-
-          <span class="price">28 €</span>
+          <h2>O poema</h2>
+          <span class="price">—</span>
         </div>
-      </a>
+      </article>
 
-      <button class="add-to-cart" data-add-to-cart>
-        <span data-lang="pt">Adicionar</span>
-        <span data-lang="en" hidden>Add</span>
-      </button>
+      <!-- PRODUCT 2 -->
+      <article class="product-card">
+        <img
+          src="../assets/img/tote-preto-o-poema.webp"
+          alt="Tote bag preta com poema"
+          loading="lazy"
+        />
 
-    </article>
+        <div class="product-info">
+          <h2>O poema (preto)</h2>
+          <span class="price">—</span>
+        </div>
+      </article>
 
-      <!-- Repete cards via HTML ou JS -->
+      <!-- PRODUCT 3 -->
+      <article class="product-card">
+        <img
+          src="../assets/img/ca-poema-2.webp"
+          alt="Peça com poema"
+          loading="lazy"
+        />
+
+        <div class="product-info">
+          <h2>Poema</h2>
+          <span class="price">—</span>
+        </div>
+      </article>
 
     </section>
 
   </main>
 
   <!-- FOOTER -->
-<footer class="site-footer">
+  <footer class="site-footer">
     <p>
-     Design do site por
-<a href="https://clarastudio.pt" target="_blank" rel="noopener"> - clara.</a>
+      Design do site por
+      <a href="https://clarastudio.pt" target="_blank" rel="noopener">
+        clara.
+      </a>
     </p>
   </footer>
 
