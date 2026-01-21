@@ -1,10 +1,10 @@
-/* =====================================================
+/* =========================================================
    LOVE LETTERS — STYLES
-   ===================================================== */
+   ========================================================= */
 
-/* ---------------------
+/* ========================
    FONTS (SELF-HOSTED)
-   --------------------- */
+   ======================== */
 
 @font-face {
   font-family: "Archivo";
@@ -42,9 +42,9 @@
   font-display: swap;
 }
 
-/* ---------------------
-   CSS VARIABLES
-   --------------------- */
+/* ========================
+   VARIABLES
+   ======================== */
 
 :root {
   --bg: #ffffff;
@@ -64,9 +64,9 @@ html[data-theme="dark"] {
   --border: #2a2a2a;
 }
 
-/* ---------------------
+/* ========================
    RESET / BASE
-   --------------------- */
+   ======================== */
 
 *,
 *::before,
@@ -74,21 +74,23 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  font-family: var(--font-ui);
-  font-weight: 400;
   background: var(--bg);
   color: var(--text);
+  font-family: var(--font-ui);
+  font-weight: 400;
+  line-height: 1.45;
 }
 
-/* ---------------------
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========================
    LANGUAGE VISIBILITY
-   --------------------- */
+   ======================== */
 
 [data-lang] {
   display: block;
@@ -102,9 +104,9 @@ html[data-lang="en"] [data-lang="pt"] {
   display: none;
 }
 
-/* ---------------------
+/* ========================
    TYPOGRAPHY
-   --------------------- */
+   ======================== */
 
 h1, h2, h3 {
   font-family: var(--font-ui);
@@ -119,52 +121,44 @@ p {
   max-width: 60ch;
 }
 
-.editorial,
 .hero-lead,
-.letter,
-.about-text p {
-  font-family: var(--font-editorial);
-  font-size: 1.05rem;
-}
-
-em {
+.editorial,
+.about-text p,
+.contact-form p {
   font-family: var(--font-editorial);
 }
 
-/* ---------------------
+.hero-lead {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* ========================
    LINKS & BUTTONS
-   --------------------- */
+   ======================== */
 
 a {
   color: inherit;
   text-decoration: none;
-  position: relative;
 }
 
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
+a:hover {
+  color: var(--accent);
 }
 
 .btn {
   display: inline-block;
-  padding: 0.9rem 1.6rem;
+  padding: 0.85rem 1.5rem;
   border: 1px solid var(--border);
   background: transparent;
   font-family: var(--font-ui);
   font-weight: 600;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
   cursor: pointer;
 }
 
@@ -174,9 +168,9 @@ a:hover::after {
   color: #fff;
 }
 
-/* ---------------------
+/* ========================
    HEADER
-   --------------------- */
+   ======================== */
 
 .site-header {
   display: flex;
@@ -197,41 +191,41 @@ a:hover::after {
 
 .header-actions button,
 .cart-icon {
-  margin-left: 0.75rem;
   background: none;
   border: none;
   font-size: 1rem;
   cursor: pointer;
 }
 
-/* ---------------------
+/* ========================
    HERO (HOME)
-   --------------------- */
+   ======================== */
 
 .home-hero {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 1.25rem;
 }
 
 .hero-title {
   font-size: clamp(3rem, 10vw, 7rem);
 }
 
-.hero-lead {
-  font-style: italic;
-  color: var(--muted);
+.hero-media img {
+  width: 100%;
 }
 
-.accent {
-  color: var(--accent);
+@media (min-width: 768px) {
+  .home-hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
-/* ---------------------
+/* ========================
    PAGE HERO
-   --------------------- */
+   ======================== */
 
 .page-hero {
   padding: 4rem 1.25rem 2.5rem;
@@ -242,89 +236,71 @@ a:hover::after {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
 }
 
-.page-hero .hero-lead {
-  max-width: 45ch;
-}
-
-/* ---------------------
-   ANIMATIONS
-   --------------------- */
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ---------------------
+/* ========================
    SHOP
-   --------------------- */
-
-.shop-filters {
-  padding: 2rem 1.25rem;
-}
-
-.shop-filters button {
-  margin-right: 0.75rem;
-}
+   ======================== */
 
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 2rem;
-  padding: 2rem 1.25rem 4rem;
+  padding: 3rem 1.25rem 4rem;
 }
 
-.product-card img {
-  width: 100%;
-  display: block;
+.product-card h2 {
+  font-size: 1.1rem;
 }
 
-.product-info h2 {
-  font-size: 1.2rem;
-}
-
-.price {
-  font-weight: 700;
-}
-
-/* ---------------------
+/* ========================
    ABOUT
-   --------------------- */
+   ======================== */
+
+.about-image {
+  padding: 2rem 1.25rem;
+}
 
 .about-content {
   padding: 3rem 1.25rem 4rem;
 }
 
-/* ---------------------
+/* ========================
    CONTACT
-   --------------------- */
+   ======================== */
 
 .contact-content {
   padding: 3rem 1.25rem 4rem;
 }
 
-.letter {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-  border: 1px solid var(--border);
-  background: var(--bg);
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-/* ---------------------
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* ========================
    CART
-   --------------------- */
+   ======================== */
 
 .cart-content {
   display: grid;
@@ -332,26 +308,8 @@ a:hover::after {
   gap: 2rem;
   padding: 3rem 1.25rem 4rem;
 }
-.home-hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.hero-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
 
 @media (min-width: 768px) {
-      .home-hero {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
   .cart-content {
     grid-template-columns: 2fr 1fr;
   }
@@ -367,9 +325,9 @@ a:hover::after {
   color: var(--muted);
 }
 
-/* ---------------------
+/* ========================
    FOOTER
-   --------------------- */
+   ======================== */
 
 .site-footer {
   padding: 2rem 1.25rem;
